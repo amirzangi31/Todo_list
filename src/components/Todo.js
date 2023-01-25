@@ -14,9 +14,9 @@ function Todo(props) {
   const { dispatch } = useContext(TodoContext);
   //STATE
   const [activeEdit, setActiveEdit] = useState(false);
-  const { id, title, completed } = props;
+  const { id, title, completed , index } = props;
   const [textEdit, setTextEdit] = useState("");
-
+  
   //HANDLERS
   const activeHandler = () => {
     setActiveEdit(true);
@@ -38,7 +38,7 @@ function Todo(props) {
     `}
     >
       <span>
-        {id}-{title}
+        {index + 1}-{title}
       </span>
       {activeEdit && (
         <div className="flex justify-center items-center">

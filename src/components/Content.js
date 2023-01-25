@@ -17,8 +17,8 @@ function Content() {
 
   return (
     <div className=" mt-10 w-11/12 mx-auto rounded-lg  ">
-      {todos.map((todo) => (
-        <Todo key={todo.id} {...todo} />
+      {todos.map((todo , index) => (
+        <Todo key={todo.id} {...todo } index={index}  />
       ))}
     </div>
   );
